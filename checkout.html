@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido - Big Burg 3 Irmãos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="checkout-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Big Burg 3 Irmãos">
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="checkout-main">
+        <div class="checkout-container">
+            <h1 class="checkout-title">FINALIZAR PEDIDO</h1>
+
+            <!-- Resumo do Pedido -->
+            <section class="order-summary-section">
+                <h2>📋 Resumo do Pedido</h2>
+                <div id="orderItemsList" class="order-items-list"></div>
+                <div class="order-summary-totals">
+                    <p>Subtotal: <span id="orderSubtotal">R$ 0,00</span></p>
+                    <p>Taxa de Entrega: <span id="orderDeliveryFee">R$ 0,00</span></p>
+                    <p class="total-final">Total: <span id="orderTotalFinal">R$ 0,00</span></p>
+                </div>
+            </section>
+
+            <!-- Formulário -->
+            <section class="order-form-section">
+                <h2>📍 Informações de Entrega</h2>
+                
+                <form id="checkoutForm" class="checkout-form">
+                    <!-- Bairro com Pesquisa -->
+                    <div class="form-group">
+                        <label for="bairroInput">🏘️ Bairro</label>
+                        <input list="bairrosList" id="bairroInput" class="form-control" placeholder="Digite para pesquisar o bairro" required>
+                        <datalist id="bairrosList">
+                            <!-- Opções de bairro serão preenchidas via JS -->
+                        </datalist>
+                        <input type="hidden" id="bairroSelect" name="bairroSelect" value="" required>
+                    </div>
+                    
+                    <!-- Endereço -->
+                    <div class="form-group">
+                        <label for="enderecoInput">🏠 Endereço Completo</label>
+                        <input type="text" id="enderecoInput" class="form-control" placeholder="Ex: R. Messias, Nº 20" required>
+                    </div>
+                    
+                    <!-- Método de Pagamento -->
+                    <div class="form-group">
+                        <label for="pagamentoSelect">💳 Método de Pagamento</label>
+                        <select id="pagamentoSelect" class="form-control" required>
+                            <option value="">Selecione o método</option>
+                            <option value="Pix">Pix</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Cartão">Cartão</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Troco -->
+                    <div class="form-group" id="trocoGroup" style="display: none;">
+                        <label for="trocoInput">💰 Troco para quanto?</label>
+                        <input type="number" id="trocoInput" class="form-control" placeholder="Ex: 50">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="noChangeNeeded">
+                            <label for="noChangeNeeded">Não preciso de troco</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Observações -->
+                    <div class="form-group">
+                        <label for="observacoesInput">📝 Observações (opcional)</label>
+                        <textarea id="observacoesInput" class="form-control" rows="4" placeholder="Ex: Sem cebola, tirar tomate..."></textarea>
+                    </div>
+                    
+                    <!-- Botão de Enviar -->
+                    <button type="submit" class="btn-whatsapp" id="sendWhatsappFinal">
+                        <span class="whatsapp-icon">📱</span>
+                        Enviar Pedido pelo WhatsApp
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Big Burg 3 Irmãos">
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-title">FAÇA SEU PEDIDO</h3>
+                <a href="https://wa.me/5565992708350" class="footer-phone">
+                    <span class="phone-icon">📱</span>
+                    (65) 99270-8350
+                </a>
+                <p class="footer-whatsapp">WhatsApp</p>
+                <div class="footer-social">
+                    <p class="footer-instagram">
+                        <span class="instagram-icon">📷</span>
+                        @bigburg3irmaos
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Big Burg 3 Irmãos - Hamburgueria Artesanal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
+
