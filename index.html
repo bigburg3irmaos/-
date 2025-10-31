@@ -1,0 +1,121 @@
+''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Burg 3 Irmãos - Hamburgueria Artesanal Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-container">
+            <!-- Logo -->
+            <div class="logo-container" data-aos="fade-down">
+                <img src="images/logo.png" alt="Big Burg 3 Irmãos" class="main-logo">
+            </div>
+            
+            <!-- Hambúrguer Hero -->
+            <div class="burger-hero" data-aos="zoom-in" data-aos-delay="200">
+                <div class="burger-glow"></div>
+                <img src="images/burger_hero.png" alt="Hambúrguer Artesanal" class="burger-image">
+            </div>
+            
+            <!-- Texto Hero -->
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="400">
+                <h1 class="hero-title">SABOR ARTESANAL</h1>
+                <p class="hero-subtitle">Hambúrgueres feitos com paixão e ingredientes premium</p>
+                <div class="hero-cta">
+                    <a href="#lanches" class="btn-hero">VER CARDÁPIO</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Botão Flutuante do Carrinho -->
+    <div class="cart-float" id="proceedToCheckoutFloat" style="display: none;">
+        <button class="btn-proceed" id="proceedToCheckoutBtn">
+            <span class="cart-icon">🛒</span>
+            <span class="btn-text">Ver Pedido</span>
+            <span class="cart-badge" id="cartCount">0</span>
+        </button>
+    </div>
+
+    <!-- Seção de Lanches -->
+    <section class="menu-section" id="lanches">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">NOSSO MENU</span>
+                <h2 class="section-title">LANCHES</h2>
+                <p class="section-description">Hambúrgueres artesanais preparados com carinho</p>
+            </div>
+            <div class="menu-grid" id="lanchesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Seção de Bebidas -->
+    <section class="menu-section bebidas-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">PARA ACOMPANHAR</span>
+                <h2 class="section-title">BEBIDAS</h2>
+                <p class="section-description">Refrescantes e geladas</p>
+            </div>
+            <div class="menu-grid" id="bebidasGrid"></div>
+        </div>
+    </section>
+
+    <!-- Seção de Adicionais -->
+    <section class="menu-section adicionais-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">PERSONALIZE</span>
+                <h2 class="section-title">ADICIONAIS</h2>
+                <p class="section-description">Deixe seu lanche ainda mais especial</p>
+            </div>
+            <div class="menu-grid adicionais-grid" id="adicionaisGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Big Burg 3 Irmãos">
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-title">FAÇA SEU PEDIDO</h3>
+                <a href="https://wa.me/5565992708350" class="footer-phone">
+                    <span class="phone-icon">📱</span>
+                    (65) 99270-8350
+                </a>
+                <p class="footer-whatsapp">WhatsApp</p>
+                <div class="footer-social">
+                    <p class="footer-instagram">
+                        <span class="instagram-icon">📷</span>
+                        @bigburg3irmaos
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Big Burg 3 Irmãos - Hamburgueria Artesanal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificação Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
